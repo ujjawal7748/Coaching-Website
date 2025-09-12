@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Navigation = () => {
   return (
 
@@ -11,8 +10,8 @@ const Navigation = () => {
 
           <div className="flex items-center space-x-2 w-1/5 flex-shrink-0"> 
             <div className="text-blue-700 font-bold text-3xl">
-              ALLEN
-              <p className="text-gray-600 text-xs font-normal mt-1">Kota, Rajasthan</p>
+              MOMENTUM
+              <p className="text-gray-600 text-xs text-center font-normal mt-1">DIG CHOWK, PURNEA</p>
             </div>
           </div>
 

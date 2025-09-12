@@ -1,12 +1,22 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
+import CoursesSection from "../components/CoursesSection";
+import HomeBanner from "../components/HomeBanner";
+import AchievementsSection from "../components/AchievementSection";
+import StarsSection from "../components/StarsSection";
+import AchievementNumber from "../components/AchievementNumber";
+import BlogArchive from "../components/BlogArchive";
+
 
 const HomePage = () => {
   return (
     <MainLayout>
-      <div className="bg-yellow-300 p-4">
-        <h1 className="text-4xl text-red-600 font-bold underline">Tailwind Test</h1>
-      </div>
+      <HomeBanner />
+      <CoursesSection />
+      <AchievementsSection />
+      <StarsSection />
+      <AchievementNumber />
+      <BlogArchive />
     </MainLayout>
   );
 };
