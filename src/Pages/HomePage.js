@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <MainLayout>
       <div className="bg-yellow-300 p-4">
-        <h1 className="text-4xl text-red-600 font-bold underline">Tailwind Test</h1>
+        <h1 className="text-4xl text-red-600 font-bold underline">Working</h1>
       </div>
     </MainLayout>
   );
