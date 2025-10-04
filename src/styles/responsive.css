@@ -1,0 +1,34 @@
+@media(max-width: 980px){
+
+.menu-web{
+    display: none;
+}
+
+.ham-menu{
+    display: inline-block ;
+}
+
+.mob-menu nav ul {
+    padding: 10px;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    /* gap: 10px; */
+    width: 100%;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    background: #fff;
+}
+
+
+
+.mob-menu nav ul li {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+}
+
+
