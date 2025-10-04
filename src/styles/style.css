@@ -1,0 +1,28 @@
+.ham-menu{
+    display: none;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ham-menu button {
+    font-size: 30px;
+}
+
+/* =============================================== Banner =============================================== */
+
+.bnr-slider{
+    width: 100%;
+    height: 300px;
+}
+
+.home-hero{
+    background-image: url(/src/assets/compress_background.webp);
+}
+
+/* #1d4ed8 */
+
+
