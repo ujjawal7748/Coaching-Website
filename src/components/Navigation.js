@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 
 const Navigation = () => {
+  const [showMenu, setShowMenu] = useState(false);
 
-  const [showMenu, setShowMenu] = useState(false)
-  
-  const hamToggle = () =>{
-    setShowMenu(!showMenu)
-  }
+  const hamToggle = () => {
+    setShowMenu(!showMenu);
+  };
 
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0">
       <div className="bg-gray-800 h-2 w-full"></div>
 
       <div className="bg-white shadow-md p-4">
         <div className="container mx-auto flex items-center nav-menu">
           <div className="flex items-center space-x-2 w-1/5 flex-shrink-0">
             <div className="text-blue-700 font-bold text-3xl">
-              ALLEN
-              <p className="text-gray-600 text-xs font-normal mt-1">
-                Kota, Rajasthan
+              <p className="uppercase">Momemtum</p>
+              <p className="text-gray-600 text-xs text-center font-normal mt-1">
+                Patna, Bihar
               </p>
             </div>
           </div>
@@ -76,15 +75,11 @@ const Navigation = () => {
                 </li>
               </ul>
             </nav>
-
-            
-
-            
           </div>
           <div className="ham-menu ">
-              <button onClick={hamToggle}>{showMenu ? "x" : "≡"}</button>
-              {/* × */}
-            </div>
+            <button onClick={hamToggle}>{showMenu ? "x" : "≡"}</button>
+            {/* × */}
+          </div>
         </div>
       </div>
     </header>
