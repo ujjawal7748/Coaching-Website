@@ -1,0 +1,52 @@
+    <div className="col">
+                  <div className="cards">
+                    <div className="card-item">
+                      <div>{/* img */}</div>
+                      <div>
+                        <h3>IIT-JEE Coaching</h3>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s.
+                        </p>
+                        <button className="card-btn"> Click Here</button>
+                      </div>
+                    </div>
+                    <div className="card-item">
+                      <div>{/* img */}</div>
+                      <div>
+                        <h3>NEET Preparation</h3>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s
+                        </p>
+                        <button className="card-btn"> Click Here</button>
+                      </div>
+                    </div>
+                    <div className="card-item">
+                      <div>{/* img */}</div>
+                      <div>
+                        <h3>Foundation Courses (Class 8–10)</h3>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s
+                        </p>
+                        <button className="card-btn"> Click Here</button>
+                      </div>
+                    </div>
+                    <div className="card-item">
+                      <div>{/* img */}</div>
+                      <div>
+                        <h3>Scholarship & Talent Tests</h3>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s
+                        </p>
+                        <button className="card-btn"> Click Here</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>

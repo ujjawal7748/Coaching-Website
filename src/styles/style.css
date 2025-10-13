@@ -1,3 +1,12 @@
+
+.container{
+    margin: 0 auto;
+}
+
+header{
+    z-index: 9999;
+}
+
 .ham-menu{
     display: none;
 }
@@ -21,8 +30,76 @@
 
 .home-hero{
     background-image: url(/src/assets/compress_background.webp);
+    position: relative;
 }
 
-/* #1d4ed8 */
+.home-hero .row{padding-bottom: 180px;}
 
 
+.hero-image img{
+ width: 500px;
+}
+
+
+.educational-res-card{
+    width: 80%;
+    margin: 0 auto;
+     position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(13%, 50%);
+}
+
+
+.home-cards{
+    padding: 160px 0 0 0;
+}
+
+ .slick-prev{
+left: 0 !important;
+z-index: 99;
+ }
+
+ .slick-next{
+right: 0 !important;
+z-index: 99;
+ }
+
+.slick-list {
+    height: 420px;
+}
+
+/* =============== Our Mission =============== */
+
+.our-mission-sec{
+ background-color: #264796;
+}
+
+.our-mission-img-1, .our-mission-img-2, .our-mission-img-3 {
+    height: 290px;
+    object-fit: cover;
+    width: 800px;
+    object-position: 50% 80%;
+}
+
+
+/* =============== Impact Section =============== */
+
+.impct-card ul li{
+    position: relative;
+    padding-left: 65px;
+}
+
+.impct-card ul li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    content: "\2713";
+    font-size: 26px;
+    font-weight: 800;
+    background-color: #fff;
+    border-radius: 50%;
+    padding-left: 8px;
+}

@@ -3,9 +3,8 @@ import AboutUs from "./Pages/AboutUs";
 import HomePage from "./Pages/HomePage";
 import ContactUs from "./Pages/ContactUs";
 import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
-import "./styles/style.css"
-import "./styles/responsive.css"
-
+import "./styles/style.css";
+import "./styles/responsive.css";
 
 function App() {
   return (
