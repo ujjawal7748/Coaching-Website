@@ -55,6 +55,19 @@ header{
     padding: 160px 0 0 0;
 }
 
+ .slick-prev{
+left: 0 !important;
+z-index: 99;
+ }
+
+ .slick-next{
+right: 0 !important;
+z-index: 99;
+ }
+
+.slick-list {
+    height: 420px;
+}
 
 /* =============== Our Mission =============== */
 

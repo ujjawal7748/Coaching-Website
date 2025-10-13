@@ -60,8 +60,18 @@
 margin-left: 0 !important;
 
 }
-
+.slick-slide {
+    margin: 0 5px;
 }
+}
+
+/* @media(min-width: 1110px){
+    .slick-slide {
+    width: 1000px;
+    margin: 0 5px;
+}
+} */
+
 
 
 @media(max-width: 1024px){
