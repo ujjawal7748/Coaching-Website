@@ -12,7 +12,7 @@ const Navigation = () => {
       <div className="bg-gray-800 h-2 w-full"></div>
 
       <div className="bg-white shadow-md p-4">
-        <div className="container mx-auto flex items-center nav-menu">
+        <div className="container mx-auto flex items-center nav-menu nav-container">
           <div className="flex items-center space-x-2 w-1/5 flex-shrink-0">
             <div className="text-blue-700 font-bold text-3xl">
               <p className="uppercase">Momemtum</p>
@@ -43,20 +43,20 @@ const Navigation = () => {
                 </li>
                 <li>
                   <a
-                    href="/courses-and-fees"
+                    href="/course-and-fee"
                     className="hover:text-blue-700 transition-colors duration-300"
                   >
                     Courses & Fees
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="/achievements"
                     className="hover:text-blue-700 transition-colors duration-300"
                   >
                     Achievements
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     href="/blogs"

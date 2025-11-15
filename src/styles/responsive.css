@@ -63,6 +63,22 @@ margin-left: 0 !important;
 .slick-slide {
     margin: 0 5px;
 }
+
+.conact-us-teams .conact-us-teams-row1 {
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+section .row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home-abt-us .row{
+    width: 100%;
+}
+
 }
 
 /* @media(min-width: 1110px){

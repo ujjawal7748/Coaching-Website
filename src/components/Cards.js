@@ -42,7 +42,7 @@ const Cards = () => {
       {card_data.map(
         ({ image, cardTitle, cardDescription, linkText, linkUrl }, index) => {
           return (
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700" key={index}>
               <img className="rounded-t-lg" src={image} alt="" />
 
               <div className="p-5">

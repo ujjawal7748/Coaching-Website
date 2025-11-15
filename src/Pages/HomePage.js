@@ -7,6 +7,7 @@ import EducationalResource from "../components/EducationalResource";
 import offlineClass_ from "../assets/students-in-classroom.webp";
 import ImpactSection from "../components/ImpactSection";
 import eduRes from "../assets/note.webp";
+import StarsSection from "../components/StarsSection";
 const HomePage = () => {
   return (
     <MainLayout>
@@ -16,7 +17,7 @@ const HomePage = () => {
 
       <section className="home-hero pt-12 lg:pt-24">
         <div className="container">
-          <div className="row flex justify-between items-center lg:px-5 md:px-5 xs:px-5">
+          <div className="row flex justify-between items-center px-10 ">
             <div className="col hero-col-1">
               <h1 className="font-bold text-center  sm:text-left text-[#1B2124] text-4xl lg:text-5xl md:leading-[48px] xl:leading-[50px] leading-[1.3] mb-[6px]">
                 Shaping Careers, Building Futures
@@ -26,12 +27,19 @@ const HomePage = () => {
                 Competitive Exams.
               </p>
               <div className="py-5 flex gap-5 hero-btns">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+
+                <a href="course-and-fee">
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   Explore Courses
                 </button>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                </a>
+                <a href="/contact-us">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   Join Now
                 </button>
+                </a>
+
+                
               </div>
             </div>
             <div className="col hero-image">
@@ -47,11 +55,11 @@ const HomePage = () => {
 
       <section className="home-cards">
         <div className="container">
-          <div className="row lg:px-5 md:px-5 xs:px-5">
+          <div className="row px-10">
             <h2 className="text-4xl sm:text-left text-center">
               Courses & Programs Offered
             </h2>
-            <div className="col grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-6 justify-items-center py-12  home-card">
+            <div className="col grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-6 justify-items-center py-12  home-card ">
               <Cards />
             </div>
           </div>
@@ -70,8 +78,8 @@ const HomePage = () => {
 
       <section className="our-mission-sec py-12">
         <div className="container">
-          <div className="row lg:px-5 md:px-5 xs:px-5 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <div className="col lg:px-5 md:px-5 xs:px-5 px-5">
+          <div className="row px-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+            <div className="col">
               <h2 className="text-4xl sm:text-left text-center text-white">
                 Our Mission & Vision
               </h2>
@@ -87,7 +95,7 @@ const HomePage = () => {
               </p>
             </div>
 
-            <div className="col grid gap-6 our-mission-img-col lg:px-5 md:px-5 xs:px-5 px-5">
+            <div className="col grid gap-6 our-mission-img-col">
               <div className="row img-row grid justify-center">
                 <img
                   src={offlineClass_}
@@ -118,10 +126,10 @@ const HomePage = () => {
 
       <section className="py-12">
         <div className="container">
-          <div className="row">
+          <div className="row px-10">
             <div className="col">
               <h2 className="text-4xl sm:text-left text-center">
-                EducationalResources
+                Educational Resources
               </h2>
               <p className="text-xl pt-6">
                 A wide range of learning resources designed to enrich your
@@ -129,9 +137,9 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div className="row py-12">
-            <div className="col ">
-              <div className="education-res-cards grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="row py-12 px-10">
+            <div className="col">
+              <div className="education-res-cards grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a
                   href="/reference-books"
                   className="group relative bg-blue-50 rounded-xl p-6 transition-all duration-300 hover:bg-blue-100 hover:shadow-xl block"
@@ -219,6 +227,44 @@ const HomePage = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="home-star-sec">
+        <div className="container">
+          <div className="row ">
+            <div>
+              <StarsSection />
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="py-12 home-abt-us">
+        <div className="container">
+          <div className="row px-10 ">
+            <div className="col ">
+              <h2 className="text-4xl text-[#1B2124]  sm:text-left text-center font-bold">
+                About Us
+              </h2>
+              <p className="text-xl pt-6">
+                Momentum was established with the dream of making world-class education accessible to every deserving student in Bihar.
+                We envision a future where every aspirant from our region can compete confidently at the national level, whether it’s the Joint Entrance Examination (JEE) for engineering or the National Eligibility cum Entrance Test (NEET) for medical careers.
+                Our vision goes beyond just classroom teaching—we aim to build thinkers, innovators, and achievers who can shape the future of our nation.
+              </p>
+            </div>
+            <div className="py-5 flex gap-5 hero-btns justify-center">
+
+              <a href="/about-us">
+
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  About Us
+                </button>
+              </a>
+
+            </div>
+
           </div>
         </div>
       </section>

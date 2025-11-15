@@ -43,12 +43,14 @@ const BannerSlider = () => {
     arrows: true,
     pauseOnHover: true,
     prevArrow: (
-      <div className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full cursor-pointer shadow-md">
+      <div className="">
+        {/* absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full cursor-pointer shadow-md */}
         <BsChevronCompactLeft size={28} className="text-gray-700" />
       </div>
     ),
     nextArrow: (
-      <div className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full cursor-pointer shadow-md">
+      <div className="">
+        {/* absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full cursor-pointer shadow-md */}
         <BsChevronCompactRight size={28} className="text-gray-700" />
       </div>
     ),
@@ -68,10 +70,10 @@ const BannerSlider = () => {
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className="relative flex justify-center items-center px-3"
+            className="relative flex justify-center items-center"
           >
             {/* Banner Image */}
-            <div className="w-full h-[250px] md:h-[420px] rounded-xl overflow-hidden shadow-lg relative">
+            <div className="w-full h-[250px] md:h-[420px] overflow-hidden shadow-lg relative">
               <img
                 src={slide.img}
                 alt={slide.title}

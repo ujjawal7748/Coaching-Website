@@ -16,17 +16,17 @@ const Footer = () => {
   return (
     <footer className="bg-[#121212] text-gray-300"> 
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 footer-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">About Us</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors duration-300">About ALLEN</a></li>
+              <li><a href="#" className="hover:text-white transition-colors duration-300">About Momentum</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Our Inspiration</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Directors Message</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">ALLEN System</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Lead With ALLEN</a></li>
+              <li><a href="#" className="hover:text-white transition-colors duration-300">Momentum System</a></li>
+              <li><a href="#" className="hover:text-white transition-colors duration-300">Lead With Momentum</a></li>
             </ul>
           </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors duration-300">Online Programs</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Sanskar Mahotsav</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Toppers Talk</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">ALLEN World Records</a></li>
+              <li><a href="#" className="hover:text-white transition-colors duration-300">Momentum World Records</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Disclosure, Policies & Documents</a></li>
             </ul>
           </div>
@@ -109,7 +109,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white mb-2">Send us a Message</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faEnvelope} className="text-red-500" />
-              <a href="mailto:info@allen.in" className="text-sm hover:text-white transition-colors duration-300">info@allen.in</a>
+              <a href="mailto:info@Momentum.in" className="text-sm hover:text-white transition-colors duration-300">info@Momentum.in</a>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const Footer = () => {
           </div>
 
           <div className="text-sm mb-4">
-            <p>ALLEN Career Institute Private Limited</p>
+            <p>Momentum Career Institute Private Limited</p>
             <p>(CIN: U80100RJ2021PTC077131)</p>
             <p>Registered & Corporate Office : "SANKALP", CP-6, Indra Vihar, Kota (Rajasthan) - 324005</p>
           </div>
@@ -152,7 +152,7 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors duration-300"><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
 
-          <p className="text-xs">&copy; {currentYear} ALLEN Career Institute Pvt. Ltd. All Rights Reserved.</p>
+          <p className="text-xs">&copy; {currentYear} Momentum Career Institute Pvt. Ltd. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
