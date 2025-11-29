@@ -80,7 +80,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white mb-2">Give Us a Call</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faPhone} className="text-green-500" />
-              <p className="text-sm">+91-XXXXXXXXXX, +91-XXXXXXXXXX<br />(08:00 AM to 08:00 PM)</p>
+              <p className="text-sm">+91-XXXXXXXXXX, +91-7549954080<br />(08:00 AM to 08:00 PM)</p>
             </div>
           </div>
 

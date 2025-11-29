@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser"; // Import EmailJS
 import MainLayout from "../components/MainLayout";
 import eduRes from "../assets/note.webp";
+
 const ContactUs = () => {
+  const form = useRef();
+  // Get current time for the hidden input
+  const [currentTime] = useState(new Date().toLocaleString());
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_qhm9rpi',    // 🔴 PASTE YOUR SERVICE ID HERE
+        'template_y85f1mo',   // 🔴 PASTE YOUR TEMPLATE ID HERE
+        form.current,
+        'uLdhqCH_nNLtOn-tj'     // 🔴 PASTE YOUR PUBLIC KEY HERE
+      )
+      .then(
+        (result) => {
+          console.log('SUCCESS!');
+          alert("Message Sent Successfully!");
+          e.target.reset(); // Clear form on success
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <MainLayout>
       <section className="bg-gray-50 dark:bg-gray-900">
@@ -11,14 +40,20 @@ const ContactUs = () => {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
                 Contact Us
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#" method="POST">
+              
+              {/* Added ref={form} and onSubmit={sendEmail} */}
+              <form ref={form} onSubmit={sendEmail} className="space-y-4 md:space-y-6">
+                
+                {/* --- HIDDEN TIME INPUT --- */}
+                <input type="hidden" name="time" value={currentTime} />
+
                 <div>
                   <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Your Name
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    name="name" // Matches {{name}}
                     id="name"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="John Doe"
@@ -31,7 +66,7 @@ const ContactUs = () => {
                   </label>
                   <input
                     type="email"
-                    name="email"
+                    name="email" // Matches {{email}}
                     id="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="you@example.com"
@@ -44,7 +79,7 @@ const ContactUs = () => {
                   </label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="message" // Matches {{message}}
                     rows="4"
                     className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-600 focus:border-primary-600 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Write your message here..."
@@ -53,7 +88,7 @@ const ContactUs = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium text-sm text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 >
                   Send Message
                 </button>
@@ -63,6 +98,7 @@ const ContactUs = () => {
         </div>
       </section>
 
+      {/* --- TEAM SECTION (UNCHANGED) --- */}
       <section className="py-12 conact-us-teams">
         <div className="container">
           <div className="row px-10 conact-us-teams-row1">
@@ -140,8 +176,6 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-
-
     </MainLayout>
   );
 };
