@@ -22,11 +22,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">About Us</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors duration-300">About Momentum</a></li>
+              <li><a href="/about-us/" className="hover:text-white transition-colors duration-300">About Momentum</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Our Inspiration</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Directors Message</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Momentum System</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Lead With Momentum</a></li>
             </ul>
           </div>
 
@@ -37,10 +35,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors duration-300">JEE Main</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Pre-Medical (NEET-UG)</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">PMCF (Class 6<sup>th</sup> to 10<sup>th</sup>)</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Online Programs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Sanskar Mahotsav</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Toppers Talk</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Momentum World Records</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Disclosure, Policies & Documents</a></li>
             </ul>
           </div>
@@ -53,7 +47,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors duration-300">NEET (UG) AI PMT</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">AIIMS</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">JEE (Main) - AIEEE</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Olympiads</a></li>
             </ul>
           </div>
 
@@ -64,10 +57,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors duration-300">JEE Advanced</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">NEET UG</a></li>
               <li><a href="#" className="hover:text-white transition-colors duration-300">Boards</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Distance Learning</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Online Test Series</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Workshops</a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300">Study Abroad</a></li>
             </ul>
           </div>
         </div>
@@ -82,7 +71,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white mb-2">Visit Our Location</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faLocationDot} className="text-indigo-500" />
-              <p className="text-sm">"SANKALP" CP-6, Indra Vihar Kota (Rajasthan), India 324005</p>
+              <p className="text-sm">DIG More Purnea</p>
             </div>
           </div>
 
@@ -91,7 +80,7 @@ const Footer = () => {
             <h4 className="font-semibold text-white mb-2">Give Us a Call</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faPhone} className="text-green-500" />
-              <p className="text-sm">+91-744-3556677, +91-744-2757675 <br />(08:00 AM to 08:00 PM)</p>
+              <p className="text-sm">+91-XXXXXXXXXX, +91-XXXXXXXXXX<br />(08:00 AM to 08:00 PM)</p>
             </div>
           </div>
 
@@ -137,9 +126,8 @@ const Footer = () => {
           </div>
 
           <div className="text-sm mb-4">
-            <p>Momentum Career Institute Private Limited</p>
-            <p>(CIN: U80100RJ2021PTC077131)</p>
-            <p>Registered & Corporate Office : "SANKALP", CP-6, Indra Vihar, Kota (Rajasthan) - 324005</p>
+            <p>Momentum Institute </p>
+            <p>Near Dig More, Purnea</p>
           </div>
 
           
@@ -152,7 +140,7 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors duration-300"><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
 
-          <p className="text-xs">&copy; {currentYear} Momentum Career Institute Pvt. Ltd. All Rights Reserved.</p>
+          <p className="text-xs">&copy; {currentYear} Momentum Purnea</p>
         </div>
       </div>
     </footer>

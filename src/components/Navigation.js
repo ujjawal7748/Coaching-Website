@@ -17,7 +17,7 @@ const Navigation = () => {
             <div className="text-blue-700 font-bold text-3xl">
               <p className="uppercase">Momemtum</p>
               <p className="text-gray-600 text-xs text-center font-normal mt-1">
-                Patna, Bihar
+                DIG More, Purnea
               </p>
             </div>
           </div>
