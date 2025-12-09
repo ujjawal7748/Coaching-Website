@@ -11,7 +11,7 @@ import StarsSection from "../components/StarsSection";
 const HomePage = () => {
   return (
     <MainLayout>
-      <section>
+      <section className="bnr-slider-home h-[250px] md:h-[300px] lg:h-[420px]">
         <BannerSlider />
       </section>
 

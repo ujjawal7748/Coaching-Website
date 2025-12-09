@@ -17,7 +17,7 @@ const Navigation = () => {
             <div className="text-blue-700 font-bold text-3xl">
               <p className="uppercase">Momemtum</p>
               <p className="text-gray-600 text-xs text-center font-normal mt-1">
-                DIG More, Purnea
+                DIG MORE, PURNEA
               </p>
             </div>
           </div>
@@ -35,7 +35,7 @@ const Navigation = () => {
                 </li>
                 <li>
                   <a
-                    href="/about-us"
+                    href="/about-us/"
                     className="hover:text-blue-700 transition-colors duration-300"
                   >
                     About Us
@@ -43,7 +43,7 @@ const Navigation = () => {
                 </li>
                 <li>
                   <a
-                    href="/course-and-fee"
+                    href="/course-and-fee/"
                     className="hover:text-blue-700 transition-colors duration-300"
                   >
                     Courses & Fees
@@ -59,7 +59,7 @@ const Navigation = () => {
                 </li> */}
                 <li>
                   <a
-                    href="/blogs"
+                    href="/blogs/"
                     className="hover:text-blue-700 transition-colors duration-300"
                   >
                     Blogs
@@ -67,7 +67,7 @@ const Navigation = () => {
                 </li>
                 <li>
                   <a
-                    href="/contact-us"
+                    href="/contact-us/"
                     className="hover:text-blue-700 transition-colors duration-300"
                   >
                     Contact Us

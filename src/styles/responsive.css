@@ -25,6 +25,10 @@
     padding-top: 30px;
 }
 
+.slick-list {
+    height: 300px;
+}
+
 
 }
 
@@ -77,6 +81,10 @@ section .row {
 
 .home-abt-us .row{
     width: 100%;
+}
+
+.slick-list {
+    height: 300px;
 }
 
 }
