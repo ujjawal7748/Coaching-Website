@@ -124,6 +124,21 @@ section .row {
 }
 
 }
+@media (max-width: 767px) {
+    button.slider-btn-prev,
+    button.slider-btn-next {
+        background: transparent;
+    }
+
+    button.slider-btn-prev {
+        left: -5px;
+    }
+
+    button.slider-btn-next {
+        right: -5px;
+    }
+}
+
 
 
 
