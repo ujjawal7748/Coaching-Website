@@ -84,14 +84,13 @@ const HomePage = () => {
                 Our Mission & Vision
               </h2>
               <p className="text-xl pt-6 text-white">
-                Short introduction about the institute’s purpose: “We aim to
-                provide quality coaching, experienced faculty, and a supportive
-                learning environment to help students achieve their career
-                goals.”
+                Unlock your potential with expert coaching and proven learning methods. Our programs are designed to 
+                strengthen concepts, boost confidence, and prepare students for competitive success. From strong 
+                fundamentals to exam-ready practice, we ensure complete growth.
               </p>
-              <p className="text-xl text-white">
-                Supporting statements: Focus on academic excellence, discipline,
-                innovation, and results.
+              <p className="text-xl text-white mt-6">
+                Whether it’s IIT-JEE, NEET, Scholarship Tests or Foundation Courses, students receive guidance, mentorship,
+                 and continuous support to achieve top results. Join today.
               </p>
             </div>
 
@@ -148,9 +147,8 @@ const HomePage = () => {
                     Reference Books
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    Our team of experts makes tough topics simple with study
-                    materials that explain complex ideas in an easy-to-grasp
-                    way.
+                    Carefully selected reference books that simplify difficult topics with examples, explanations, and practice questions, 
+                    helping students build strong understanding and score better.
                   </p>
 
                   <img
@@ -177,9 +175,8 @@ const HomePage = () => {
                     NCERT Solutions
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    Our team of experts makes tough topics simple with study
-                    materials that explain complex ideas in an easy-to-grasp
-                    way.
+                    Easy-to-understand NCERT solutions with step-by-step answers, clear concepts, and exam-focused explanations designed to 
+                    support school learning and competitive preparation.
                   </p>
 
                   <img
@@ -204,9 +201,8 @@ const HomePage = () => {
                 >
                   <h3 className="text-2xl font-semibold mb-3">Notes</h3>
                   <p className="text-gray-600 mb-6">
-                    Our team of experts makes tough topics simple with study
-                    materials that explain complex ideas in an easy-to-grasp
-                    way.
+                    Crisp, organized notes for quick revision, covering key points, formulas, and concepts, making study easier and last-minute
+                     preparation highly effective.
                   </p>
 
                   <img

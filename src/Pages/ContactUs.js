@@ -1,34 +1,45 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser"; // Import EmailJS
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../components/MainLayout";
 import eduRes from "../assets/note.webp";
 
 const ContactUs = () => {
-  const form = useRef();
-  // Get current time for the hidden input
   const [currentTime] = useState(new Date().toLocaleString());
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .sendForm(
-        'service_qhm9rpi',    // 🔴 PASTE YOUR SERVICE ID HERE
-        'template_y85f1mo',   // 🔴 PASTE YOUR TEMPLATE ID HERE
-        form.current,
-        'uLdhqCH_nNLtOn-tj'     // 🔴 PASTE YOUR PUBLIC KEY HERE
-      )
-      .then(
-        (result) => {
-          console.log('SUCCESS!');
-          alert("Message Sent Successfully!");
-          e.target.reset(); // Clear form on success
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          alert("Failed to send message. Please try again.");
+    const formData = new FormData(e.target);
+    formData.append("access_key", "d59bc541-0d68-4a35-ab7e-29ab9a4c9615");
+
+    try {
+      // 1️⃣ Send to Web3Forms
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      // 2️⃣ Send to Google Sheets
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxwF3-Jj4UrrtHUWDNrdo_whPi7BjcnK-e1u2BOsVGrVSlwq7NM_uFxtiRZKYZ437Dv/exec",
+        {
+          method: "POST",
+          body: formData,
         }
       );
+
+      e.target.reset();
+      navigate("/thank-you"); // ⬅️ Redirect after success
+
+    } catch (error) {
+      alert("Error submitting form. Try again.");
+      console.error(error);
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -37,141 +48,63 @@ const ContactUs = () => {
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow dark:border sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
+
+              <h1 className="text-xl font-bold text-center text-gray-900 dark:text-white">
                 Contact Us
               </h1>
-              
-              {/* Added ref={form} and onSubmit={sendEmail} */}
-              <form ref={form} onSubmit={sendEmail} className="space-y-4 md:space-y-6">
-                
-                {/* --- HIDDEN TIME INPUT --- */}
+
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+
                 <input type="hidden" name="time" value={currentTime} />
 
                 <div>
-                  <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Your Name
                   </label>
                   <input
                     type="text"
-                    name="name" // Matches {{name}}
-                    id="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    name="name"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
                     placeholder="John Doe"
                     required
                   />
                 </div>
+
                 <div>
-                  <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Your Email
                   </label>
                   <input
                     type="email"
-                    name="email" // Matches {{email}}
-                    id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    name="email"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
                     placeholder="you@example.com"
                     required
                   />
                 </div>
+
                 <div>
-                  <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Your Message
                   </label>
                   <textarea
-                    id="message"
-                    name="message" // Matches {{message}}
+                    name="message"
                     rows="4"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-600 focus:border-primary-600 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block w-full p-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg"
                     placeholder="Write your message here..."
                     required
                   ></textarea>
                 </div>
+
                 <button
                   type="submit"
-                  className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium text-sm text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  disabled={loading}
+                  className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* --- TEAM SECTION (UNCHANGED) --- */}
-      <section className="py-12 conact-us-teams">
-        <div className="container">
-          <div className="row px-10 conact-us-teams-row1">
-            <div className="col">
-              <h2 className="text-4xl sm:text-left text-center font-semibold text-center">
-                Our Team
-              </h2>
-              <p className="text-xl pt-6 text-gray-700 text-center sm:text-left">
-                Meet the dedicated educators and mentors behind Momentum — guiding
-                JEE & NEET aspirants with experience, passion, and personal attention.
-              </p>
-            </div>
-          </div>
-
-          <div className="row py-12 px-10">
-            <div className="col">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-                {/* Team Member 1 */}
-                <div className="group relative bg-blue-50 rounded-xl p-6 transition-all duration-300 hover:bg-blue-100 hover:shadow-xl">
-                  <img
-                    src={eduRes}
-                    alt="Team Member"
-                    className="w-32 h-32 object-cover rounded-full mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <h3 className="text-2xl font-semibold text-center mb-1">
-                    Rajesh Kumar
-                  </h3>
-                  <p className="text-center text-blue-600 font-medium mb-2">
-                    Physics Faculty
-                  </p>
-                  <p className="text-gray-600 text-center">
-                    10+ years of experience teaching Physics for JEE & NEET aspirants.
-                  </p>
-                </div>
-
-                {/* Team Member 2 */}
-                <div className="group relative bg-blue-50 rounded-xl p-6 transition-all duration-300 hover:bg-blue-100 hover:shadow-xl">
-                  <img
-                    src={eduRes}
-                    alt="Team Member"
-                    className="w-32 h-32 object-cover rounded-full mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <h3 className="text-2xl font-semibold text-center mb-1">
-                    Sneha Verma
-                  </h3>
-                  <p className="text-center text-blue-600 font-medium mb-2">
-                    Chemistry Faculty
-                  </p>
-                  <p className="text-gray-600 text-center">
-                    Expert in Organic Chemistry with a passion for simplifying concepts.
-                  </p>
-                </div>
-
-                {/* Team Member 3 */}
-                <div className="group relative bg-blue-50 rounded-xl p-6 transition-all duration-300 hover:bg-blue-100 hover:shadow-xl">
-                  <img
-                    src={eduRes}
-                    alt="Team Member"
-                    className="w-32 h-32 object-cover rounded-full mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <h3 className="text-2xl font-semibold text-center mb-1">
-                    Arjun Singh
-                  </h3>
-                  <p className="text-center text-blue-600 font-medium mb-2">
-                    Mathematics Faculty
-                  </p>
-                  <p className="text-gray-600 text-center">
-                    Known for conceptual clarity and strong problem-solving approach.
-                  </p>
-                </div>
-
-              </div>
             </div>
           </div>
         </div>

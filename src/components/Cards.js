@@ -6,7 +6,7 @@ const Cards = () => {
       image: img,
       cardTitle: "IIT-JEE Coaching",
       cardDescription:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "Our IIT-JEE coaching program is designed for students who dream big. We focus on concept clarity, problem-solving skills and exam strategies to help you achieve top ranks.",
       linkText: "Click Here",
       linkUrl: "#",
     },
@@ -14,7 +14,7 @@ const Cards = () => {
       image: img,
       cardTitle: "NEET Preparation",
       cardDescription:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "Get ready for NEET with our scientifically designed program that strengthens Biology, Physics and Chemistry fundamentals through result-oriented teaching.",
       linkText: "Click Here",
       linkUrl: "#",
     },
@@ -22,7 +22,7 @@ const Cards = () => {
       image: img,
       cardTitle: "Scholarship & Talent Tests",
       cardDescription:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "We conduct talent evaluation and scholarship tests for students who want to test their abilities, challenge themselves and get rewarded.",
       linkText: "Click Here",
       linkUrl: "#",
     },
@@ -31,7 +31,7 @@ const Cards = () => {
       image: img,
       cardTitle: "Foundation Courses (Class 8–10)",
       cardDescription:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "Our foundation program prepares students early for boards, Olympiads, NTSE, KVPY and future competitive exams like IIT-JEE and NEET.",
       linkText: "Click Here",
       linkUrl: "#",
     },
