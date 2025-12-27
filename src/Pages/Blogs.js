@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet-async";
 import MainLayout from '../components/MainLayout'
 import BlogImage from '../assets/little-girl-glasses-blue-backpack-with-oranges-created-with-generative-ai-technology.webp'
 import { Link } from 'react-router-dom';
@@ -57,7 +58,25 @@ const Blogs = () => {
     return (
         <>
             <MainLayout>
+                <Helmet>
+  <title>Blogs & Study Resources | IIT-JEE & NEET Preparation – Momentum</title>
 
+  <meta
+    name="description"
+    content="Read expert blogs, exam preparation tips, study strategies, and updates for IIT-JEE, NEET, and competitive exams from Momentum Coaching, Purnea."
+    key="description"
+  />
+  <meta
+    name="robots"
+    content="index, follow"
+    key="robots"
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.momentumpurnea.com/blogs/"
+  />
+</Helmet>
                 <section className="abt-page-bnr ">
                     <div className="container">
                         <div className="row">
@@ -72,12 +91,12 @@ const Blogs = () => {
                 <section className="bg-gray-50 py-12 sm:py-16">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center">
-                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                                 From Our Blog
-                            </h2>
-                            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+                            </h1>
+                            <h2 className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
                                 Get the latest updates, articles, and insights from our expert team.
-                            </p>
+                            </h2>
                         </div>
                         <div className="mx-auto mt-12 grid  gap-8 lg:max-w-none lg:grid-cols-3">
                             {blogPosts.map((post) => (

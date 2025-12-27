@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import MainLayout from "../components/MainLayout";
 import BannerSlider from "../components/BannerSlider";
 import Cards from "../components/Cards";
@@ -11,6 +12,25 @@ import StarsSection from "../components/StarsSection";
 const HomePage = () => {
   return (
     <MainLayout>
+      <Helmet>
+  <title>Momentum Coaching | Best IIT-JEE & NEET Coaching in Purnea</title>
+
+  <meta
+    name="description"
+    content="Momentum Coaching is the leading institute in Purnea for IIT-JEE, NEET & Competitive Exams. Join us to shape your career and build a bright future."
+    key="description"
+  />
+  <meta
+    name="robots"
+    content="index, follow"
+    key="robots"
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.momentumpurnea.com/"
+  />
+</Helmet>
       <section className="bnr-slider-home h-[250px] md:h-[300px] lg:h-[420px]">
         <BannerSlider />
       </section>

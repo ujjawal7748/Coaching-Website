@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet-async";
 import MainLayout from '../components/MainLayout'
 import AboutUsImg from '../assets/little-girl-glasses-blue-backpack-with-oranges-created-with-generative-ai-technology.webp'
 import heroImg from '../assets/students.png'
@@ -7,6 +8,25 @@ const AboutUs = () => {
   return (
     <>
       <MainLayout>
+        <Helmet>
+  <title>About Momentum Coaching | Trusted IIT-JEE & NEET Institute in Purnea</title>
+
+  <meta
+    name="description"
+    content="Learn about Momentum Coaching, a trusted IIT-JEE and NEET coaching institute in Purnea. Our mission is to empower students in Bihar with quality education, expert guidance, and disciplined learning."
+    key="description"
+  />
+  <meta
+    name="robots"
+    content="index, follow"
+    key="robots"
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.momentumcoaching.com/about-us/"
+  />
+</Helmet>
         <section className="abt-page-bnr ">
           <div className="container">
             <div className="row">
