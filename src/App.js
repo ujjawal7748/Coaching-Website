@@ -9,6 +9,8 @@ import Blogs from "./Pages/Blogs";
 import CourseFee from "./Pages/CourseFee";
 import ThankYou from "./Pages/ThankYou";
 import BlogOne from "./blogs/BlogOne";
+import NoResponse from "./Pages/UnderMaintanance";
+import UnderMaintanance from "./Pages/UnderMaintanance";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/course-and-fee" element={<CourseFee />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/under-maintenance" element={<UnderMaintanance />} />
           <Route
             path="/blog/10-proven-techniques-to-improve-your-exam-scores"
             element={<BlogOne />}

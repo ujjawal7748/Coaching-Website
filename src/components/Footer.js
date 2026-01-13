@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#121212] text-gray-300"> 
+    <footer className="bg-[#121212] text-gray-300">
 
       <div className="container mx-auto px-4 py-12 footer-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          
+
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Results</h3>
             <ul className="space-y-2">
@@ -61,60 +61,67 @@ const Footer = () => {
           </div>
         </div>
 
-        
+
         <hr className="border-gray-700 my-8" />
 
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left items-start">
-         
+
           <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-white mb-2">Visit Our Location</h4>
-            <div className="flex items-center space-x-2">
+
+            <a
+              href="https://maps.app.goo.gl/HBQ2EU6md4SEBCwz5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 hover:text-indigo-400 transition"
+            >
               <FontAwesomeIcon icon={faLocationDot} className="text-indigo-500" />
-              <p className="text-sm">DIG More Purnea</p>
-            </div>
+              <p className="text-sm cursor-pointer">DIG Chowk, Purnea </p>
+            </a>
           </div>
 
-          
+
+
           <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-white mb-2">Give Us a Call</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faPhone} className="text-green-500" />
-              <p className="text-sm">+91-XXXXXXXXXX, +91-7549954080<br />(08:00 AM to 08:00 PM)</p>
+              <p className="text-sm">+91-8092934411, +91-7549954080<br />(08:00 AM to 08:00 PM)</p>
             </div>
           </div>
 
-          
+
           <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-white mb-2">Get Support</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faCircleInfo} className="text-blue-500" />
-              <a href="#" className="text-sm hover:text-white transition-colors duration-300">Click Here</a>
+              <a href="tel:+918092934411" className="text-sm hover:text-white transition-colors duration-300">Click Here</a>
             </div>
           </div>
 
-          
+
           <div className="flex flex-col items-center md:items-start">
             <h4 className="font-semibold text-white mb-2">Send us a Message</h4>
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon icon={faEnvelope} className="text-red-500" />
-              <a href="mailto:info@Momentum.in" className="text-sm hover:text-white transition-colors duration-300">info@Momentum.in</a>
+              <a href="mailto:momentumpurnea@gmail.com" className="text-sm hover:text-white transition-colors duration-300">momentumpurnea@gmail.com</a>
             </div>
           </div>
         </div>
 
         <div className="text-center mt-8">
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full inline-flex items-center justify-center transition-colors duration-300"
-                aria-label="Scroll to top"
-            >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
-            </button>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full inline-flex items-center justify-center transition-colors duration-300"
+            aria-label="Scroll to top"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+          </button>
         </div>
       </div>
 
-      <div className="bg-[#1a1a1a] text-gray-400 py-4 border-t border-gray-700"> 
+      <div className="bg-[#1a1a1a] text-gray-400 py-4 border-t border-gray-700">
         <div className="container mx-auto px-4 text-center">
           <div className="mb-4 text-sm space-x-4">
             <a href="#" className="hover:text-white transition-colors duration-300">Terms of Use</a> |
@@ -130,7 +137,7 @@ const Footer = () => {
             <p>Near Dig More, Purnea</p>
           </div>
 
-          
+
           <div className="flex justify-center space-x-6 mb-4">
             <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors duration-300"><FontAwesomeIcon icon={faWhatsapp} /></a>
             <a href="#" className="text-gray-400 hover:text-white text-xl transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>

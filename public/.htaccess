@@ -1,4 +1,12 @@
 RewriteEngine On
+
+# Do NOT redirect the maintenance page itself
+RewriteCond %{REQUEST_URI} !^/under-maintenance?$
+
+# Redirect EVERYTHING to maintenance
+RewriteRule ^.*$ /under-maintenance [R=302,L]
+
+
 RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

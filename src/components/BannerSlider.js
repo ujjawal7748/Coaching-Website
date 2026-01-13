@@ -47,8 +47,9 @@ const BannerSlider = () => {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ${current === index ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 transition-opacity duration-700 ${
+            current === index ? "opacity-100" : "opacity-0"
+          }`}
         >
           {/* Background Image */}
           <img
@@ -60,8 +61,8 @@ const BannerSlider = () => {
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          {/* Text content */}
-          <div className="absolute inset-0 flex items-center px-10 md:px-20 text-white">
+          {/* Text content with 50px top & bottom padding */}
+          <div className="absolute inset-0 flex items-center px-10 md:px-20 py-[50px] text-white">
             <div className="max-w-xl space-y-4">
               <h2 className="text-3xl md:text-5xl font-bold">
                 {slide.title}
@@ -81,7 +82,7 @@ const BannerSlider = () => {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="slider-btn-prev absolute left-5 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+        className="absolute left-5 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
       >
         <FiChevronLeft size={28} />
       </button>
@@ -89,7 +90,7 @@ const BannerSlider = () => {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="slider-btn-next absolute right-5 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
+        className="absolute right-5 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/60 p-3 rounded-full transition"
       >
         <FiChevronRight size={28} />
       </button>
@@ -100,8 +101,9 @@ const BannerSlider = () => {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full ${current === index ? "bg-white" : "bg-white/50"
-              }`}
+            className={`w-3 h-3 rounded-full ${
+              current === index ? "bg-white" : "bg-white/50"
+            }`}
           ></button>
         ))}
       </div>
